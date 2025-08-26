@@ -16,7 +16,7 @@ namespace GameBackend
             set { _coordinate = value; }
         }
 
-        public Ball(int x, int y)
+        public Ball(float x, float y)
         {
             _coordinate = new Coordinate(x, y);
         }
