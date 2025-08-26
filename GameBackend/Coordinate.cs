@@ -25,6 +25,15 @@ namespace GameBackend
 
         public Coordinate(float x, float y)
         {
+            if (x < 0)
+            {
+                throw new ArgumentException("x coordinate cannot be less than 0");
+            }
+
+            if (y < 0)
+            {
+                throw new ArgumentException("y coordinate cannot be less than 0");
+            }
             _x = x;
             _y = y;
         }
