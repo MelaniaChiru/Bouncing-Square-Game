@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameBackend
 {
-    internal class Ball
+    public class Ball
     {
         private Coordinate _coordinate;
 
@@ -21,10 +21,10 @@ namespace GameBackend
             _coordinate = new Coordinate(x, y);
         }
 
-        public Move()
+        public void Move()
         {
-            float oldX = _coordinate.x;
-            float oldY = _coordinate.y;
+            float oldX = _coordinate.X;
+            float oldY = _coordinate.Y;
 
             float newX = oldX + 1;
             float newY = oldY + 1;
