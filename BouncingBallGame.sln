@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BouncingBallGame", "Bouncin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameBackend", "GameBackend\GameBackend.csproj", "{D888F809-0005-4DFC-9BAF-EF5CF4EE9CDC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameBackendTests", "GameBackendTests\GameBackendTests.csproj", "{35212A14-381A-4E09-8D45-9688067EDAFA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,18 @@ Global
 		{D888F809-0005-4DFC-9BAF-EF5CF4EE9CDC}.Release|x64.Build.0 = Release|Any CPU
 		{D888F809-0005-4DFC-9BAF-EF5CF4EE9CDC}.Release|x86.ActiveCfg = Release|Any CPU
 		{D888F809-0005-4DFC-9BAF-EF5CF4EE9CDC}.Release|x86.Build.0 = Release|Any CPU
+		{35212A14-381A-4E09-8D45-9688067EDAFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35212A14-381A-4E09-8D45-9688067EDAFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35212A14-381A-4E09-8D45-9688067EDAFA}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{35212A14-381A-4E09-8D45-9688067EDAFA}.Debug|x64.Build.0 = Debug|Any CPU
+		{35212A14-381A-4E09-8D45-9688067EDAFA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{35212A14-381A-4E09-8D45-9688067EDAFA}.Debug|x86.Build.0 = Debug|Any CPU
+		{35212A14-381A-4E09-8D45-9688067EDAFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35212A14-381A-4E09-8D45-9688067EDAFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35212A14-381A-4E09-8D45-9688067EDAFA}.Release|x64.ActiveCfg = Release|Any CPU
+		{35212A14-381A-4E09-8D45-9688067EDAFA}.Release|x64.Build.0 = Release|Any CPU
+		{35212A14-381A-4E09-8D45-9688067EDAFA}.Release|x86.ActiveCfg = Release|Any CPU
+		{35212A14-381A-4E09-8D45-9688067EDAFA}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

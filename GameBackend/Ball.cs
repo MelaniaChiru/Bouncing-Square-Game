@@ -9,6 +9,20 @@ namespace GameBackend
     public class Ball
     {
         private Coordinate _coordinate;
+        private int _width;
+        private int _height;
+        private int _screenWidth;
+        private int _ScreenHeight;
+
+        public int Width
+        {
+            get { return _width; }
+        }
+
+        public int Height
+        {
+            get { return _height; }
+        }
 
         public Coordinate Coordinate
         {
@@ -16,9 +30,13 @@ namespace GameBackend
             set { _coordinate = value; }
         }
 
-        public Ball(float x, float y)
+        public Ball(float x, float y, int width, int height, int screenWidth, int screenHeight)
         {
             _coordinate = new Coordinate(x, y);
+            _width = width;
+            _height = height;
+            _screenWidth = screenWidth;
+            _ScreenHeight = screenHeight;
         }
 
         public void Move()

@@ -1,2 +1,2 @@
-﻿using var game = new BouncingBallGame.Game1();
+﻿using var game = new BouncingBallGame.BouncingBallGame();
 game.Run();
