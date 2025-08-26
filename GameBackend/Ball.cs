@@ -13,6 +13,8 @@ namespace GameBackend
         private int _height;
         private int _screenWidth;
         private int _ScreenHeight;
+        private int _vx;
+        private int _vy;
 
         public int Width
         {
@@ -37,6 +39,8 @@ namespace GameBackend
             _height = height;
             _screenWidth = screenWidth;
             _ScreenHeight = screenHeight;
+            _vx = 2;
+            _vy = 2;
         }
 
         public void Move()
@@ -44,8 +48,19 @@ namespace GameBackend
             float oldX = _coordinate.X;
             float oldY = _coordinate.Y;
 
-            float newX = oldX + 1;
-            float newY = oldY + 1;
+            // checks to make sure ball stays in frame
+            if (_coordinate.X + _width <= 0 || _coordinate.X + _width > _screenWidth)
+            {
+                _vx = _vx * -1;
+            }
+
+            if (_coordinate.Y + _height <= 0 || _coordinate.Y + _height > _ScreenHeight)
+            {
+                _vy = _vy * -1;
+            }
+
+            float newX = oldX + _vx;
+            float newY = oldY + _vy;
 
             _coordinate = new Coordinate(newX, newY);
         }
