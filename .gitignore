@@ -1,0 +1,69 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.pdb
+*.obj
+*.exe
+*.dll
+*.lib
+*.ncb
+*.aps
+*.bsc
+*.sbr
+*.res
+*.pch
+*.ilk
+*.idb
+*.opt
+*.exp
+*.map
+*.bak
+*.log
+*.tlb
+*.tlh
+*.tmp
+*.err
+*.pgc
+*.pgd
+*.meta
+*.pidb
+*.vshost.exe
+*.vshost.exe.config
+*.resharper
+*.dotSettings
+*.testsettings
+*.trx
+*.webtest
+*.cache
+*.bin
+*.obj
+*.scc
+*.vspscc
+*.vssscc
+*.builds
+*.userprefs
+*.DS_Store
+Thumbs.db
+Desktop.ini
+
+# MonoGame specific
+Content/bin/
+Content/obj/
+*.mgcb.log
+*.mgcb.cache
+
+# Rider IDE
+.idea/
+
+# NuGet packages
+packages/
+
+# Restore files
+*.nuget.props
+*.nuget.targets
+
+# User-specific files
+*.csproj.user
+*.fsproj.user
+*.vbproj.user
