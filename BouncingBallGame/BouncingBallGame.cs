@@ -24,9 +24,12 @@ public class BouncingBallGame : Game
 
     protected override void Initialize()
     {
+        int screenWidth = 640;
+        int screenHeight = 480;
+
         // TODO: Add your initialization logic here
         _ball = new Ball(0, 0, 50, 50, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
-        _screen = new Screen(new RenderTarget2D(GraphicsDevice, 640, 480));
+        _screen = new Screen(new RenderTarget2D(GraphicsDevice, screenWidth, screenHeight));
 
         base.Initialize();
     }
