@@ -26,7 +26,7 @@ public class BouncingBallGame : Game
     {
         // TODO: Add your initialization logic here
         _ball = new Ball(0, 0, 50, 50, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
-        _screen = new Screen(new RenderTarget2D(GraphicsDevice, 1400, 1080));
+        _screen = new Screen(new RenderTarget2D(GraphicsDevice, 800, 600));
 
         base.Initialize();
     }

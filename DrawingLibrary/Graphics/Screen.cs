@@ -32,8 +32,10 @@ namespace DrawingLib.Graphics
 
 			Rectangle destinationRectangle = CalculateDestinationRectangle();
 
+			RenderTarget.GraphicsDevice.Clear(Color.CornflowerBlue);
+
 			spritesRenderer.Begin(textureFiltering);
-			 spritesRenderer.Draw(RenderTarget, destinationRectangle, Color.White);
+			spritesRenderer.Draw(RenderTarget, destinationRectangle, Color.White);
 			spritesRenderer.End();
 		}
 
@@ -68,6 +70,7 @@ namespace DrawingLib.Graphics
 			float windowAspectRatio = (float)windowWidth / windowHeight;
 			float screenAspectRatio = (float)Width / Height;
 
+			// intialize new rectangle size and position
 			int rectangleWith, retangleHeight;
 			int X, Y;
 
