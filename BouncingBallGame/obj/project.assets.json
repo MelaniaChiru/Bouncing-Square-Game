@@ -807,6 +807,16 @@
           "lib/netcoreapp2.0/_._": {}
         }
       },
+      "DrawingLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/DrawingLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DrawingLibrary.dll": {}
+        }
+      },
       "GameBackend/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -2003,6 +2013,11 @@
         "version.txt"
       ]
     },
+    "DrawingLibrary/1.0.0": {
+      "type": "project",
+      "path": "../DrawingLibrary/DrawingLibrary.csproj",
+      "msbuildProject": "../DrawingLibrary/DrawingLibrary.csproj"
+    },
     "GameBackend/1.0.0": {
       "type": "project",
       "path": "../GameBackend/GameBackend.csproj",
@@ -2016,6 +2031,7 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "DrawingLibrary >= 1.0.0",
       "GameBackend >= 1.0.0",
       "GameBackendTests >= 1.0.0",
       "MonoGame.Content.Builder.Task >= 3.8.*",
@@ -2047,6 +2063,9 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
+            "/Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/DrawingLibrary/DrawingLibrary.csproj": {
+              "projectPath": "/Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/DrawingLibrary/DrawingLibrary.csproj"
+            },
             "/Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/GameBackend/GameBackend.csproj": {
               "projectPath": "/Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/GameBackend/GameBackend.csproj"
             },
