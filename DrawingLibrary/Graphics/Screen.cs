@@ -55,8 +55,8 @@ namespace DrawingLib.Graphics
 			RenderTarget.GraphicsDevice.SetRenderTarget(null);
 			_isSet = false;
 		}
-		
-		 public Rectangle CalculateDestinationRectangle()
+
+		public Rectangle CalculateDestinationRectangle()
 		{
 			// Get the current viewport dimensions
 			Viewport viewport = RenderTarget.GraphicsDevice.Viewport;
@@ -88,6 +88,11 @@ namespace DrawingLib.Graphics
 			}
 
 			return new Rectangle(X, Y, rectangleWith, retangleHeight);
+		}
+
+		public void Dispose()
+		{
+			RenderTarget?.Dispose();
 		}
     }
 }
