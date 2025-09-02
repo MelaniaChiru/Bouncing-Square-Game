@@ -28,7 +28,7 @@ public class BouncingBallGame : Game
         int screenHeight = 480;
 
         // TODO: Add your initialization logic here
-        _ball = new Ball(0, 0, 50, 50, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
+        _ball = new Ball(0, 0, 50, 50, screenWidth, screenHeight);
         _screen = new Screen(new RenderTarget2D(GraphicsDevice, screenWidth, screenHeight));
 
         base.Initialize();
