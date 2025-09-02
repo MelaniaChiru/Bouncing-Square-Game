@@ -1,5 +1,6 @@
 ﻿
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using System;
 
 namespace DrawingLib.Graphics
@@ -13,12 +14,14 @@ namespace DrawingLib.Graphics
         /// <summary>
         /// Height of the screen, based on the render target
         /// </summary>
-        int Height { get; }
+        int Height { get; set; }
 
         /// <summary>
         /// Width of the screen, based on the render target
         /// </summary>
-        int Width { get; }
+        int Width { get; set; }
+
+        RenderTarget2D RenderTarget { get; set; }
 
         /// <summary>
         /// Draw sprites to the window. This is performed by using the spritesRenderer to begin drawing, 
@@ -51,5 +54,24 @@ namespace DrawingLib.Graphics
         /// <returns>A rectangle whose coordinates and size represent where the screen should be drawn with respect to the window</returns>
         /// <remarks>Note, the coordinate system of the window is (0,0) in the upper left corner with positive X right and positive Y down</remarks>
         Rectangle CalculateDestinationRectangle();
+
+        
+        /// <summary>
+        /// Construcor for the IScreen interface
+        /// </summary>
+        /// <param name="renderTarget2D"></param>
+        /// <exception cref="ArgumentNullException"></exception>
+        public void IScreen(RenderTarget2D renderTarget)
+        {
+            if (renderTarget == null)
+            {
+                throw new ArgumentNullException(nameof(renderTarget), "RenderTarget2D cannot be null");
+            }
+
+            RenderTarget = renderTarget;
+            Width = renderTarget.Width;
+            Height = renderTarget.Height;
+        }
+
     }
 }
