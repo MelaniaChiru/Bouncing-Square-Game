@@ -34,7 +34,7 @@ namespace GameBackend
 
         public Ball(float x, float y, int width, int height, int screenWidth, int screenHeight)
         {
-            _coordinate = new Coordinate(x, y);
+            _coordinate = new Coordinate(x, y, _width, _height);
             _width = width;
             _height = height;
             _screenWidth = screenWidth;
@@ -62,7 +62,7 @@ namespace GameBackend
             float newX = oldX + _vx;
             float newY = oldY + _vy;
 
-            _coordinate = new Coordinate(newX, newY);
+            _coordinate = new Coordinate(newX, newY, _width, _height);
         }
     }
 }

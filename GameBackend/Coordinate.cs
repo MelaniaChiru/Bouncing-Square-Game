@@ -12,9 +12,9 @@ namespace GameBackend
         private float _y;
 
         public float X
-        { 
+        {
             get { return _x; }
-            set { _x = value; } 
+            set { _x = value; }
         }
 
         public float Y
@@ -23,17 +23,17 @@ namespace GameBackend
             set { _y = value; }
         }
 
-        public Coordinate(float x, float y)
+        public Coordinate(float x, float y, int ballWith, int ballHeight)
         {
-            // if (x < 0)
-            // {
-            //     throw new ArgumentException("x coordinate cannot be less than 0");
-            // }
+            if (x < 0 - ballWith)
+            {
+                throw new ArgumentException("x coordinate cannot be less than 0");
+            }
 
-            // if (y < 0)
-            // {
-            //     throw new ArgumentException("y coordinate cannot be less than 0");
-            // }
+            if (y < 0 - ballHeight)
+            {
+                throw new ArgumentException("y coordinate cannot be less than 0");
+            }
             _x = x;
             _y = y;
         }
