@@ -55,23 +55,5 @@ namespace DrawingLib.Graphics
         /// <remarks>Note, the coordinate system of the window is (0,0) in the upper left corner with positive X right and positive Y down</remarks>
         Rectangle CalculateDestinationRectangle();
 
-        
-        /// <summary>
-        /// Construcor for the IScreen interface
-        /// </summary>
-        /// <param name="renderTarget2D"></param>
-        /// <exception cref="ArgumentNullException"></exception>
-        public void IScreen(RenderTarget2D renderTarget)
-        {
-            if (renderTarget == null)
-            {
-                throw new ArgumentNullException(nameof(renderTarget), "RenderTarget2D cannot be null");
-            }
-
-            RenderTarget = renderTarget;
-            Width = renderTarget.Width;
-            Height = renderTarget.Height;
-        }
-
     }
 }
