@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BouncingBallGame")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4af541b9168d9d93ee52e69c870a522325348d4a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eb3d5d8bae22b24645d0b1b1094fbb9f402f1686")]
 [assembly: System.Reflection.AssemblyProductAttribute("BouncingBallGame")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BouncingBallGame")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

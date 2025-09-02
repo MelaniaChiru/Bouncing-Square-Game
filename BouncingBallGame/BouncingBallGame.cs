@@ -12,19 +12,21 @@ public class BouncingBallGame : Game
     private SpriteBatch _spriteBatch;
     private Ball _ball;
     private Texture2D _ballImage;
-    private IScreen _screen;
+    private Screen _screen;
 
     public BouncingBallGame()
     {
         _graphics = new GraphicsDeviceManager(this);
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
+        Window.AllowUserResizing = true;
     }
 
     protected override void Initialize()
     {
         // TODO: Add your initialization logic here
         _ball = new Ball(0, 0, 50, 50, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
+        _screen = new Screen(new RenderTarget2D(GraphicsDevice, 1400, 1080));
 
         base.Initialize();
     }
@@ -83,3 +85,7 @@ public class BouncingBallGame : Game
         base.Draw(gameTime);
     }
 }
+
+/// References used:
+/// https://docs.monogame.net/api/Microsoft.Xna.Framework.Graphics.RenderTarget2D.html
+/// https://community.monogame.net/t/window-resizing-from-within-monogame/14383
