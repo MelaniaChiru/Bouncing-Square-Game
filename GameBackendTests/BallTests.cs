@@ -52,7 +52,7 @@ namespace GameBackend.Tests
 				// Assert
 				Assert.Fail();
 			}
-			catch (ArgumentException e)
+			catch (ArgumentException)
 			{
 			}
 		}

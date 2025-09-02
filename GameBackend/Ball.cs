@@ -12,7 +12,7 @@ namespace GameBackend
         private int _width;
         private int _height;
         private int _screenWidth;
-        private int _ScreenHeight;
+        private int _screenHeight;
         private int _vx;
         private int _vy;
 
@@ -38,7 +38,7 @@ namespace GameBackend
             _width = width;
             _height = height;
             _screenWidth = screenWidth;
-            _ScreenHeight = screenHeight;
+            _screenHeight = screenHeight;
             _vx = 2;
             _vy = 2;
         }
@@ -54,7 +54,7 @@ namespace GameBackend
                 _vx = _vx * -1;
             }
 
-            if (_coordinate.Y + _height <= 0 || _coordinate.Y + _height > _ScreenHeight)
+            if (_coordinate.Y + _height <= 0 || _coordinate.Y + _height > _screenHeight)
             {
                 _vy = _vy * -1;
             }

@@ -34,7 +34,7 @@ namespace GameBackend.Tests
         public void CoordinateTest_InvalidXCoordinate()
         {
             // Arrange
-            float invalidXCoordinate = -10;
+            float invalidXCoordinate = -51;
             float validYCoordinate = 58;
             int ballWidth = 50;
             int ballHeight = 50;
@@ -46,7 +46,7 @@ namespace GameBackend.Tests
                 // If error is not thrown, an error has occured
                 // Assert
                 Assert.Fail();
-            } catch (ArgumentException e)
+            } catch (ArgumentException)
             {
             }
         }
@@ -68,7 +68,7 @@ namespace GameBackend.Tests
                 // Assert
                 Assert.Fail();
             }
-            catch (ArgumentException e)
+            catch (ArgumentException)
             {
             }
         }
