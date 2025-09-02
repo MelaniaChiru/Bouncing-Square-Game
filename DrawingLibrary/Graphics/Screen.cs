@@ -33,6 +33,7 @@ namespace DrawingLib.Graphics
 			Rectangle destinationRectangle = CalculateDestinationRectangle();
 
 			spritesRenderer.Begin(textureFiltering);
+			 spritesRenderer.Draw(RenderTarget, destinationRectangle, Color.White);
 			spritesRenderer.End();
 		}
 
