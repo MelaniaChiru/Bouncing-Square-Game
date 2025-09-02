@@ -74,11 +74,11 @@ namespace DrawingLib.Graphics
 			int rectangleWith, retangleHeight;
 			int X, Y;
 
-			if (windowAspectRatio > screenAspectRatio)
+			if (windowWidth > Width)
 			{
-				// Window is wider than the screen aspect ratio
+				// Window is wider than the screen
 				retangleHeight = windowHeight;
-				rectangleWith = (int)(retangleHeight * screenAspectRatio);
+				rectangleWith = (int)(windowHeight * screenAspectRatio);
 				X = (windowWidth - rectangleWith) / 2;
 				Y = 0;
 			}
@@ -86,7 +86,7 @@ namespace DrawingLib.Graphics
 			{
 				// Window is taller than the screen aspect ratio
 				rectangleWith = windowWidth;
-				retangleHeight = (int)(rectangleWith / screenAspectRatio);
+				retangleHeight = (int)(windowWidth / screenAspectRatio);
 				X = 0;
 				Y = (windowHeight - retangleHeight) / 2;
 			}
