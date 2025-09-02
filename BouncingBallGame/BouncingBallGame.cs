@@ -1,4 +1,5 @@
-﻿using GameBackend;
+﻿using DrawingLib.Graphics;
+using GameBackend;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -11,6 +12,7 @@ public class BouncingBallGame : Game
     private SpriteBatch _spriteBatch;
     private Ball _ball;
     private Texture2D _ballImage;
+    private IScreen _screen;
 
     public BouncingBallGame()
     {
@@ -61,9 +63,22 @@ public class BouncingBallGame : Game
         GraphicsDevice.Clear(Color.CornflowerBlue);
 
         // TODO: Add your drawing code here
+
+        // Enable drawing to the screen
+        _screen.Set();
+
+        // draw sprites normally
         _spriteBatch.Begin();
         _spriteBatch.Draw(_ballImage, new Vector2(_ball.Coordinate.X, _ball.Coordinate.Y), Color.White);
         _spriteBatch.End();
+
+        // Disable drawing to the screen
+        _screen.UnSet();
+
+        // Draw the contents of the screen to the window
+        _screen.Present(new SpritesRenderer(GraphicsDevice), true);
+
+
 
         base.Draw(gameTime);
     }
