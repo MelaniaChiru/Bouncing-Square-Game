@@ -1,4 +1,5 @@
 ﻿using DrawingLib.Graphics;
+using DrawingLib.Input;
 using GameBackend;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -16,6 +17,8 @@ public class BouncingBallGame : Game
     private Screen _screen;
     private MouseState _previous;
     private MouseState _current;
+
+    private CustomKeyboard _keyboard = CustomKeyboard.Instance;
 
     public BouncingBallGame()
     {
@@ -80,6 +83,12 @@ public class BouncingBallGame : Game
         foreach (var ball in _balls)
         {
             ball.Move();
+        }
+
+        // pressing 'Esc' exits the game
+        if (_keyboard.IsKeyDown(Keys.Escape))
+        {
+            return;
         }
 
         base.Update(gameTime);
