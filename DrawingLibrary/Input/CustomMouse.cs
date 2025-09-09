@@ -21,20 +21,30 @@ namespace DrawingLib.Input
 
 		public Vector2? GetScreenPosition(IScreen screen)
 		{
-			if (screen == null)
+		    if (screen == null)
 			{
 				throw new ArgumentNullException(nameof(screen), "Screen cannot be null");
 			}
 
-			var currentPosition = WindowPosition;
+		    // Get the scaled screen rectangle in window coordinates
+		    Rectangle scaledScreenRect = screen.CalculateDestinationRectangle();
 
-			// Check that mouse position is inside screen
-			if (currentPosition.X < 0 || currentPosition.Y < 0 || currentPosition.X >= screen.Width || currentPosition.Y >= screen.Height)
+		    // Mouse position in window coordinates
+		    int mouseX = _current.X;
+		    int mouseY = _current.Y;
+
+			// Check if mouse is inside the scaled screen area
+			if (mouseX < scaledScreenRect.X || mouseX >= scaledScreenRect.X + scaledScreenRect.Width ||
+			    mouseY < scaledScreenRect.Y || mouseY >= scaledScreenRect.Y + scaledScreenRect.Height)
 			{
-				return null;
+			    return null;
 			}
 
-			return new Vector2(currentPosition.X, currentPosition.Y);
+		    // Map mouse position from scaled screen rectangle to screen coordinates
+		    float screenX = (mouseX - scaledScreenRect.X) * (float)screen.Width / scaledScreenRect.Width;
+		    float screenY = (mouseY - scaledScreenRect.Y) * (float)screen.Height / scaledScreenRect.Height;
+
+		    return new Vector2(screenX, screenY);
 		}
 
 		public bool IsLeftButtonClicked()
