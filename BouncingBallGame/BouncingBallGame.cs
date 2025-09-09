@@ -95,6 +95,9 @@ public class BouncingBallGame : Game
                 }
 
             }
+        } else if (_current.RightButton == ButtonState.Pressed && _previous.RightButton == ButtonState.Released)
+        {
+            _balls.Clear();
         }
 
         foreach (var ball in _balls)
