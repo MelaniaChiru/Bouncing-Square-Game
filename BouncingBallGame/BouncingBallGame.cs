@@ -66,6 +66,9 @@ public class BouncingBallGame : Game
         if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
 
+
+        _keyboard.Update();
+
         // TODO: Add your update logic here
         _previous = _current;
         _current = Mouse.GetState();
@@ -75,7 +78,7 @@ public class BouncingBallGame : Game
 
         if (_current.LeftButton == ButtonState.Pressed && _previous.LeftButton == ButtonState.Released)
         {
-            
+
             // Only add ball if mouse is in screen 
             if (_current.X >= 0 && _current.X < screenWidth && _current.Y >= 0 && _current.Y < screenHeight)
             {
@@ -95,8 +98,6 @@ public class BouncingBallGame : Game
         {
             return;
         }
-
-        _keyboard.Update();
 
         base.Update(gameTime);
     }
