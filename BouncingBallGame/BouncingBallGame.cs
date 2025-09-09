@@ -91,6 +91,8 @@ public class BouncingBallGame : Game
             return;
         }
 
+        _keyboard.Update();
+
         base.Update(gameTime);
     }
 
@@ -102,6 +104,15 @@ public class BouncingBallGame : Game
 
         // Enable drawing to the screen
         _screen.Set();
+
+        
+        _screen.RenderTarget.GraphicsDevice.Clear(Color.DarkKhaki);
+
+        // Pressing 'W' key makes background white
+        if (_keyboard.IsKeyDown(Keys.W))
+        {
+            _screen.RenderTarget.GraphicsDevice.Clear(Color.White);
+        }
 
         // draw sprites normally
         _spriteBatch.Begin();
@@ -115,7 +126,6 @@ public class BouncingBallGame : Game
 
         // Draw the contents of the screen to the window
         _screen.Present(new SpritesRenderer(GraphicsDevice), true);
-
 
 
         base.Draw(gameTime);
