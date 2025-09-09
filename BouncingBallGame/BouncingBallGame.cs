@@ -114,6 +114,13 @@ public class BouncingBallGame : Game
             _screen.RenderTarget.GraphicsDevice.Clear(Color.White);
         }
 
+        // Pressing 'B' key makes background white
+        if (_keyboard.IsKeyDown(Keys.B))
+        {
+            _screen.RenderTarget.GraphicsDevice.Clear(Color.CornflowerBlue);
+        }
+
+
         // draw sprites normally
         _spriteBatch.Begin();
         foreach (var ball in _balls) {
