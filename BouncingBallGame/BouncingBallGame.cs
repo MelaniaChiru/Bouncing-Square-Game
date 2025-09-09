@@ -83,13 +83,17 @@ public class BouncingBallGame : Game
 
         if (_current.LeftButton == ButtonState.Pressed && _previous.LeftButton == ButtonState.Released)
         {
-            // Only add ball if mouse is in screen 
-            if (mouseScreenPosition.Value.X >= 0 && mouseScreenPosition.Value.X < screenWidth &&
-                mouseScreenPosition.Value.Y >= 0 && mouseScreenPosition.Value.Y < screenHeight)
+            if (mouseScreenPosition != null)
             {
-                // Add a new ball at the mapped mouse position
-                var newBall = new Ball(mouseScreenPosition.Value.X, mouseScreenPosition.Value.Y, 50, 50, screenWidth, screenHeight);
-                _balls.Add(newBall);
+                // Only add ball if mouse is in screen 
+                if (mouseScreenPosition.Value.X >= 0 && mouseScreenPosition.Value.X < screenWidth &&
+                    mouseScreenPosition.Value.Y >= 0 && mouseScreenPosition.Value.Y < screenHeight)
+                {
+                    // Add a new ball at the mapped mouse position
+                    var newBall = new Ball(mouseScreenPosition.Value.X, mouseScreenPosition.Value.Y, 50, 50, screenWidth, screenHeight);
+                    _balls.Add(newBall);
+                }
+
             }
         }
 

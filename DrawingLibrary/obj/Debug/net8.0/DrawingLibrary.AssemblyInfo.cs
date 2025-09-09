@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DrawingLibrary")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+41e1b63062aec62810821e51e1b6950961178ca4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+39046ab5f1c550478e55a18214f390165933b8d5")]
 [assembly: System.Reflection.AssemblyProductAttribute("DrawingLibrary")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DrawingLibrary")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
