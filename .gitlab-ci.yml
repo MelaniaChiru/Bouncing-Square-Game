@@ -26,9 +26,8 @@ publish:
     # Framework-dependent Windows build (small output; requires .NET runtime on the target PC)
     - dotnet publish BouncingBallGame/BouncingBallGame.csproj -c Release -r win-x64 -o publish/win-x64 -p:DebugType=None -p:DebugSymbols=false
     # Zip so reviewers download a single file
-    - apt-get update && apt-get install -y zip
-    - cd publish && zip -r ../BouncingBallGame_win-x64.zip win-x64
+    - cd publish && tar -cvf ../game.tar win-x64
   artifacts:
     when: always
     paths:
-      - "BouncingBallGame_win-x64.zip"
+      - "game.tar"
