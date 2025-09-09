@@ -78,14 +78,17 @@ public class BouncingBallGame : Game
         int screenWidth = _screen.RenderTarget.Width;
         int screenHeight = _screen.RenderTarget.Height;
 
+        // Map mouse position to screen coordinates
+        var mouseScreenPosition = _mouse.GetScreenPosition(_screen);
+
         if (_current.LeftButton == ButtonState.Pressed && _previous.LeftButton == ButtonState.Released)
         {
-
             // Only add ball if mouse is in screen 
-            if (_current.X >= 0 && _current.X < screenWidth && _current.Y >= 0 && _current.Y < screenHeight)
+            if (mouseScreenPosition.Value.X >= 0 && mouseScreenPosition.Value.X < screenWidth &&
+                mouseScreenPosition.Value.Y >= 0 && mouseScreenPosition.Value.Y < screenHeight)
             {
-                // Add a new ball at the mouse position
-                var newBall = new Ball(_current.X, _current.Y, 50, 50, screenWidth, screenHeight);
+                // Add a new ball at the mapped mouse position
+                var newBall = new Ball(mouseScreenPosition.Value.X, mouseScreenPosition.Value.Y, 50, 50, screenWidth, screenHeight);
                 _balls.Add(newBall);
             }
         }
