@@ -19,6 +19,7 @@ public class BouncingBallGame : Game
     private MouseState _current;
 
     private CustomKeyboard _keyboard = CustomKeyboard.Instance;
+    private CustomMouse _mouse = CustomMouse.Instance;
 
     public BouncingBallGame()
     {
@@ -67,9 +68,10 @@ public class BouncingBallGame : Game
             Exit();
 
 
-        _keyboard.Update();
-
         // TODO: Add your update logic here
+        _keyboard.Update();
+        _mouse.Update();
+
         _previous = _current;
         _current = Mouse.GetState();
 
