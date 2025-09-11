@@ -1,4 +1,5 @@
 ﻿using DrawingLib.Graphics;
+using DrawingLib.Input;
 using GameBackend;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -16,6 +17,9 @@ public class BouncingBallGame : Game
     private Screen _screen;
     private MouseState _previous;
     private MouseState _current;
+
+    private CustomKeyboard _keyboard = CustomKeyboard.Instance;
+    private CustomMouse _mouse = CustomMouse.Instance;
 
     public BouncingBallGame()
     {
@@ -63,23 +67,48 @@ public class BouncingBallGame : Game
         if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
 
+
         // TODO: Add your update logic here
+        _keyboard.Update();
+        _mouse.Update();
+
         _previous = _current;
         _current = Mouse.GetState();
 
         int screenWidth = _screen.RenderTarget.Width;
         int screenHeight = _screen.RenderTarget.Height;
 
+        // Map mouse position to screen coordinates
+        var mouseScreenPosition = _mouse.GetScreenPosition(_screen);
+
         if (_current.LeftButton == ButtonState.Pressed && _previous.LeftButton == ButtonState.Released)
         {
-            // Add a new ball at the mouse position
-            var newBall = new Ball(_current.X, _current.Y, 50, 50, screenWidth, screenHeight);
-            _balls.Add(newBall);
+            if (mouseScreenPosition != null)
+            {
+                // Only add ball if mouse is in screen 
+                if (mouseScreenPosition.Value.X >= 0 && mouseScreenPosition.Value.X < screenWidth &&
+                    mouseScreenPosition.Value.Y >= 0 && mouseScreenPosition.Value.Y < screenHeight)
+                {
+                    // Add a new ball at the mapped mouse position
+                    var newBall = new Ball(mouseScreenPosition.Value.X, mouseScreenPosition.Value.Y, 50, 50, screenWidth, screenHeight);
+                    _balls.Add(newBall);
+                }
+
+            }
+        } else if (_current.RightButton == ButtonState.Pressed && _previous.RightButton == ButtonState.Released)
+        {
+            _balls.Clear();
         }
 
         foreach (var ball in _balls)
         {
             ball.Move();
+        }
+
+        // pressing 'Esc' exits the game
+        if (_keyboard.IsKeyDown(Keys.Escape))
+        {
+            return;
         }
 
         base.Update(gameTime);
@@ -94,6 +123,22 @@ public class BouncingBallGame : Game
         // Enable drawing to the screen
         _screen.Set();
 
+        
+        _screen.RenderTarget.GraphicsDevice.Clear(Color.DarkKhaki);
+
+        // Pressing 'W' key makes background white
+        if (_keyboard.IsKeyDown(Keys.W))
+        {
+            _screen.RenderTarget.GraphicsDevice.Clear(Color.White);
+        }
+
+        // Pressing 'B' key makes background white
+        if (_keyboard.IsKeyDown(Keys.B))
+        {
+            _screen.RenderTarget.GraphicsDevice.Clear(Color.CornflowerBlue);
+        }
+
+
         // draw sprites normally
         _spriteBatch.Begin();
         foreach (var ball in _balls) {
@@ -106,7 +151,6 @@ public class BouncingBallGame : Game
 
         // Draw the contents of the screen to the window
         _screen.Present(new SpritesRenderer(GraphicsDevice), true);
-
 
 
         base.Draw(gameTime);

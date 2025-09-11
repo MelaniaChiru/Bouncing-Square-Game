@@ -32,8 +32,6 @@ namespace DrawingLib.Graphics
 
 			Rectangle destinationRectangle = CalculateDestinationRectangle();
 
-			RenderTarget.GraphicsDevice.Clear(Color.CornflowerBlue);
-
 			spritesRenderer.Begin(textureFiltering);
 			spritesRenderer.Draw(RenderTarget, destinationRectangle, Color.White);
 			spritesRenderer.End();
