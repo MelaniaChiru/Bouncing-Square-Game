@@ -1,0 +1,216 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/BouncingBallGame/BouncingBallGame.csproj": {}
+  },
+  "projects": {
+    "/Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/BouncingBallGame/BouncingBallGame.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/BouncingBallGame/BouncingBallGame.csproj",
+        "projectName": "BouncingBallGame",
+        "projectPath": "/Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/BouncingBallGame/BouncingBallGame.csproj",
+        "packagesPath": "/Users/melania/.nuget/packages/",
+        "outputPath": "/Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/BouncingBallGame/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/melania/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/GameBackend/GameBackend.csproj": {
+                "projectPath": "/Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/GameBackend/GameBackend.csproj"
+              },
+              "/Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/GameBackendTests/GameBackendTests.csproj": {
+                "projectPath": "/Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/GameBackendTests/GameBackendTests.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "MonoGame.Content.Builder.Task": {
+              "target": "Package",
+              "version": "[3.8.*, )"
+            },
+            "MonoGame.Framework.DesktopGL": {
+              "target": "Package",
+              "version": "[3.8.*, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/GameBackend/GameBackend.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/GameBackend/GameBackend.csproj",
+        "projectName": "GameBackend",
+        "projectPath": "/Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/GameBackend/GameBackend.csproj",
+        "packagesPath": "/Users/melania/.nuget/packages/",
+        "outputPath": "/Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/GameBackend/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/melania/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/GameBackendTests/GameBackendTests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/GameBackendTests/GameBackendTests.csproj",
+        "projectName": "GameBackendTests",
+        "projectPath": "/Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/GameBackendTests/GameBackendTests.csproj",
+        "packagesPath": "/Users/melania/.nuget/packages/",
+        "outputPath": "/Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/GameBackendTests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/melania/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/GameBackend/GameBackend.csproj": {
+                "projectPath": "/Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/GameBackend/GameBackend.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "MSTest": {
+              "target": "Package",
+              "version": "[3.6.4, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.12.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
