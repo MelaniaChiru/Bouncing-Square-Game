@@ -12,7 +12,7 @@ namespace GameBackend
         private int _width;
         private int _height;
         private int _screenWidth;
-        private int _ScreenHeight;
+        private int _screenHeight;
         private int _vx;
         private int _vy;
 
@@ -34,11 +34,11 @@ namespace GameBackend
 
         public Ball(float x, float y, int width, int height, int screenWidth, int screenHeight)
         {
-            _coordinate = new Coordinate(x, y);
+            _coordinate = new Coordinate(x, y, _width, _height);
             _width = width;
             _height = height;
             _screenWidth = screenWidth;
-            _ScreenHeight = screenHeight;
+            _screenHeight = screenHeight;
             _vx = 2;
             _vy = 2;
         }
@@ -54,7 +54,7 @@ namespace GameBackend
                 _vx = _vx * -1;
             }
 
-            if (_coordinate.Y + _height <= 0 || _coordinate.Y + _height > _ScreenHeight)
+            if (_coordinate.Y + _height <= 0 || _coordinate.Y + _height > _screenHeight)
             {
                 _vy = _vy * -1;
             }
@@ -62,7 +62,7 @@ namespace GameBackend
             float newX = oldX + _vx;
             float newY = oldY + _vy;
 
-            _coordinate = new Coordinate(newX, newY);
+            _coordinate = new Coordinate(newX, newY, _width, _height);
         }
     }
 }

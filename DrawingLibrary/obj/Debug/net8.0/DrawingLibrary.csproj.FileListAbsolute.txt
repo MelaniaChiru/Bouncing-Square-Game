@@ -1,0 +1,13 @@
+/Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/DrawingLibrary/bin/Debug/net8.0/DrawingLibrary.deps.json
+/Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/DrawingLibrary/bin/Debug/net8.0/DrawingLibrary.dll
+/Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/DrawingLibrary/bin/Debug/net8.0/DrawingLibrary.pdb
+/Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/DrawingLibrary/obj/Debug/net8.0/DrawingLibrary.csproj.AssemblyReference.cache
+/Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/DrawingLibrary/obj/Debug/net8.0/DrawingLibrary.GeneratedMSBuildEditorConfig.editorconfig
+/Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/DrawingLibrary/obj/Debug/net8.0/DrawingLibrary.AssemblyInfoInputs.cache
+/Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/DrawingLibrary/obj/Debug/net8.0/DrawingLibrary.AssemblyInfo.cs
+/Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/DrawingLibrary/obj/Debug/net8.0/DrawingLibrary.csproj.CoreCompileInputs.cache
+/Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/DrawingLibrary/obj/Debug/net8.0/DrawingLibrary.sourcelink.json
+/Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/DrawingLibrary/obj/Debug/net8.0/DrawingLibrary.dll
+/Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/DrawingLibrary/obj/Debug/net8.0/refint/DrawingLibrary.dll
+/Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/DrawingLibrary/obj/Debug/net8.0/DrawingLibrary.pdb
+/Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/DrawingLibrary/obj/Debug/net8.0/ref/DrawingLibrary.dll

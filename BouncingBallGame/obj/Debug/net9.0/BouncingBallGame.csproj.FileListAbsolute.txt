@@ -383,3 +383,5 @@ C:/Users/2331868/Desktop/510-Programming/bouncingballgame/BouncingBallGame/obj/D
 /Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/BouncingBallGame/obj/Debug/net9.0/BouncingBallGame.pdb
 /Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/BouncingBallGame/obj/Debug/net9.0/BouncingBallGame.genruntimeconfig.cache
 /Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/BouncingBallGame/obj/Debug/net9.0/ref/BouncingBallGame.dll
+/Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/BouncingBallGame/bin/Debug/net9.0/DrawingLibrary.dll
+/Users/melania/Localhost/#school/Semester5/programming_510/bouncingballgame/BouncingBallGame/bin/Debug/net9.0/DrawingLibrary.pdb
