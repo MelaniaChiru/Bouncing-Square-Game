@@ -48,19 +48,26 @@ namespace GameBackend
             float oldX = _coordinate.X;
             float oldY = _coordinate.Y;
 
-            // checks to make sure ball stays in frame
-            if (_coordinate.X + _width <= 0 || _coordinate.X + _width > _screenWidth)
+            // Bounce horizontally
+            if (oldX <= 0 || oldX + _width >= _screenWidth)
             {
-                _vx = _vx * -1;
+                _vx *= -1;
             }
 
-            if (_coordinate.Y + _height <= 0 || _coordinate.Y + _height > _screenHeight)
+            // Bounce vertically
+            if (oldY <= 0 || oldY + _height >= _screenHeight)
             {
-                _vy = _vy * -1;
+                _vy *= -1;
             }
 
+            // Move ball
             float newX = oldX + _vx;
             float newY = oldY + _vy;
+
+            // make sure ball stays within screen
+            // makes sure ball does not go beyonf the edge of the screen
+            newX = Math.Max(0, Math.Min(newX, _screenWidth - _width));
+            newY = Math.Max(0, Math.Min(newY, _screenHeight - _height));
 
             _coordinate = new Coordinate(newX, newY, _width, _height);
         }
