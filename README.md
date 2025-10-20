@@ -16,7 +16,7 @@ Simple project built with the **MonoGame framework**. It demonstrates core game 
 
 
 ## 🎬 Demo
-
+https://github.com/user-attachments/assets/c209d7f5-b86f-4966-ad7e-a0ca45e849ef
 
 
 ## Running the game
