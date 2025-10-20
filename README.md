@@ -2,11 +2,12 @@
 Simple project built with the **MonoGame framework**. It demonstrates core game loop concepts, collision detection, and user input handling by allowing the player to dynamically create and destroy bouncing squares within the game window.
 
 ## 💡 Features
-* **Dynamic Object Creation**: Right-click the mouse anywhere on the screen to instantly spawn a new square that begins moving.
+* **Dynamic Object Creation**: Left-click the mouse anywhere on the screen to instantly spawn a new square that begins moving.
 * **Boundary Collision**: Each square bounces realistically off all four edges of the game window.
 * **Frame-Rate Independent Movement**: Object movement and updates are tied to game time, ensuring smooth, consistent behavior regardless of the system's current frame rate.
 * **Scalable Display**: The game is fully scalable, adjusting to different window sizes while maintaining the correct aspect ratio and ensuring the squares' positions and sizes scale appropriately.
-* C**ustomizable Aesthetics**: Users can easily change the background color of the game window.
+* **Customizable Aesthetics**: Users can easily change the background color of the game window.
+* **Screen Clearing**: Right-click mouse to clear all squares.
 
 ## ⚙️ Built with
 * C#
