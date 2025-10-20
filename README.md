@@ -1,22 +1,43 @@
-# BouncingBallGame
+# 🟥 Bouncing Square Game
+Simple project built with the **MonoGame framework**. It demonstrates core game loop concepts, collision detection, and user input handling by allowing the player to dynamically create and destroy bouncing squares within the game window.
+
+## 💡 Features
+* **Dynamic Object Creation**: Right-click the mouse anywhere on the screen to instantly spawn a new square that begins moving.
+* **Boundary Collision**: Each square bounces realistically off all four edges of the game window.
+* **Frame-Rate Independent Movement**: Object movement and updates are tied to game time, ensuring smooth, consistent behavior regardless of the system's current frame rate.
+* **Scalable Display**: The game is fully scalable, adjusting to different window sizes while maintaining the correct aspect ratio and ensuring the squares' positions and sizes scale appropriately.
+* C**ustomizable Aesthetics**: Users can easily change the background color of the game window.
+
+## ⚙️ Built with
+* C#
+* MonoGame Framework
+* Vector math
+
+
+## 🎬 Demo
+
+
 
 ## Running the game
 
-1. Clone the project
+1. If not already done, install .NET SDK from official Microsoft website
+>[!NOTE]
+> The .NET version of this project is 9.0
+> but if you have an older version, you can manually change the project's version by going in all the .csproj files as well as the .sln file to change `9.0` to which version you have installed.
+
+2. Install MonoGame Templates
 ```
-git clone https://gitlab.com/dawson-cst-cohort-2026/510/section3/chiru/bouncingballgame.git
+dotnet new install MonoGame.Templates.CSharp
 ```
+3. Clone project
+```
+git clone https://github.com/MelaniaChiru/Bouncing-Ball-Game.git
+```
+4. Go to 'BouncingBallGame' folder. (BouncingBallGame.csproj should be inside)
+``` cd BouncingBallGame```
+6. Run game
+  ``` dotnet run ```
 
-2. Cd in the 'BouncingBallGame' folder. (BouncungBallGame.csproj should be inside)
-
-3. Run `dotnet run`
-
-## Changing the Screen Size
-
-- the window size is adjustable by draging it by the corners.
-- The screen size (black screen) has to be manually changed.
-
-1. Open `BouncingBallGame.cs` file. <br>
-2. From there, go to lines 27 and 28.
-3. Change the values of the screen width and height.
-4. Save the code, and run again to see screen change size.
+## Future Improvements
+* Introcude **square to square collision** (i.e. have squares bounce off each other).
+* Add different shapes (circles, triangles, rectangles, etc.)
